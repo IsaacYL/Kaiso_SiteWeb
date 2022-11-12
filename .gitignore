@@ -1,3 +1,9 @@
+#build products
+dist/
+
+#parcel-cache
+.parcel-cache
+
 # Logs
 logs
 *.log
