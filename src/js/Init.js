@@ -7,11 +7,14 @@ import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 export var cameraRotationInit;
 
 export function init(){
-    renderer = new THREE.WebGLRenderer(); /*Renderer*/
+    canvas = document.querySelector('#c');
+    renderer = new THREE.WebGLRenderer({canvas});
+
+    //renderer = new THREE.WebGLRenderer(); /*Renderer*/
     renderer.shadowMap.enabled = true;
 
     renderer.setSize(window.innerWidth, window.innerHeight); /*Taille du rendu*/
-    renderer.setClearColor(0xA3A3A3); //Background color
+    renderer.setClearColor(0xFFFFFF); //Background color
 
     document.body.appendChild(renderer.domElement);
 
@@ -32,16 +35,17 @@ export function init(){
         75, /*Angle de vu*/
         window.innerWidth/ window.innerHeight, /*Taille de la fenetre*/
         0.1, /*Plus proche de ce que l'on voit*/
-        1000 /*Plus loin de ce que l'on voit*/
+        100 /*Plus loin de ce que l'on voit*/
     );
 
+    
 
 /*-----------------------------------------------Possibilité de bouger dans l'espace---------------------------------*/
     //const orbit = new OrbitControls(camera, renderer.domElement);
 
 
 /*-----------------------------------------------Creation de brume---------------------------------------------------*/
-    scene.fog = new THREE.Fog(0xFFFFFF, 0, 70);
+    scene.fog = new THREE.Fog(0xFFFFFF, 0, 90);
 
 /*-----------------------------------------------Mettre les axes visibles--------------------------------------------*/
     const axesHelper = new THREE.AxesHelper(5); /*Lenght of the axe*/
@@ -85,4 +89,5 @@ export function init(){
 export function animate() {
     requestAnimationFrame(animate);
     renderer.render(scene, camera);
+
 };
