@@ -5,22 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Test Kaiso Studio 02</title>
 </head>
 
 <body>
     <canvas id="c"></canvas>
-    <div id="test" class="Test"></div>
+    <!--<div id="test" class="Test"></div>-->
 
     <header>
-        <img class="logo" src="./assets/Logo.png">
-        <div class="buttons">
-            <button class="bouton service">Service</button>
-            <button class="bouton contact">Button</button>
+        <a href="./index.html"><img class="logo" src="./assets/Logo.svg"></a>
+        <div class="divbtn">
+            <input type="button" onclick="window.location.href='./service.html';" value="Service" class="btn up"/>
+            <input type="button" onclick="window.location.href='./contact.html';" value="Contact" class="btn up"/>
         </div>
     </header>
 
+    <h1>TITRE ENORME QUI CLAQUE</h1>
 
+    <footer>
+        <input type="button" onclick="window.location.href='./language.html';" value=">" class="btn down"/>
+        <input type="button" onclick="window.location.href='./language.html';" value="EN" class="btn down"/>
+    </footer>
     <script src="./js/script.js" type="module"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@ export function init(){
     renderer.shadowMap.enabled = true;
 
     renderer.setSize(window.innerWidth, window.innerHeight); /*Taille du rendu*/
-    renderer.setClearColor(0xFFFFFF); //Background color
+    renderer.setClearColor(0xA3ABB7); //Background color
 
     document.body.appendChild(renderer.domElement);
 
