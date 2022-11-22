@@ -52,6 +52,12 @@ header {
     background-color: #00000000;
 }
 
+.btn:hover, .indirecthover:hover ~ .btn{
+    color: black;
+    border-color: black;
+    background-color: #F2F2F2;
+}
+
 .up {
     padding: 2vmin 4vmin;
     margin-left: 1rem;
@@ -111,3 +117,4 @@ a{
     color: white;
     font-size: 2vmin;
 }
+
