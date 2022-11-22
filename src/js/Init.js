@@ -14,7 +14,7 @@ export function init(){
     renderer.shadowMap.enabled = true;
 
     renderer.setSize(window.innerWidth, window.innerHeight); /*Taille du rendu*/
-    renderer.setClearColor(0xA3ABB7); //Background color
+    renderer.setClearColor(0xB4BCC9); //Background color
 
     document.body.appendChild(renderer.domElement);
 
@@ -23,7 +23,7 @@ export function init(){
     //console.log(scene);
 /*---------------------------------------------Creation d'un plane / sol--------------------------------------------------*/
     const planeGeometry = new THREE.PlaneGeometry(300, 300);
-    const planeMaterial = new THREE.MeshStandardMaterial({color : 0xFFFFFF});
+    const planeMaterial = new THREE.MeshStandardMaterial({color : 0xA3ABB7});
     const plane = new THREE.Mesh(planeGeometry, planeMaterial);
     plane.rotation.x = -0.5 * Math.PI;
     scene.add(plane);
@@ -32,7 +32,7 @@ export function init(){
 
 /*-----------------------------------------------Paramètre de la caméra---------------------------------------------*/
     camera =  new THREE.PerspectiveCamera(
-        75, /*Angle de vu*/
+        50, /*Angle de vu*/
         window.innerWidth/ window.innerHeight, /*Taille de la fenetre*/
         0.1, /*Plus proche de ce que l'on voit*/
         100 /*Plus loin de ce que l'on voit*/
@@ -45,7 +45,7 @@ export function init(){
 
 
 /*-----------------------------------------------Creation de brume---------------------------------------------------*/
-    scene.fog = new THREE.Fog(0xFFFFFF, 0, 90);
+    //scene.fog = new THREE.Fog(0xA3ABB7, 0, 90);
 
 /*-----------------------------------------------Mettre les axes visibles--------------------------------------------*/
     const axesHelper = new THREE.AxesHelper(5); /*Lenght of the axe*/
@@ -56,7 +56,7 @@ export function init(){
     scene.add(ambientlight);
 
     const light = new THREE.DirectionalLight(0XFFFFFF, 1.0);
-    light.position.set(-30, 50, 0);
+    light.position.set(30, 50, 30);
     light.target.position.set(0, 0, 0);
 
     //Frustum Light
@@ -79,9 +79,9 @@ export function init(){
     scene.add(dLightShadowHelper);
 
 /*------------------------------------------------Position de la camera + Update--------------------------------------*/
-    camera.position.set(7, 4, -7); /*X, Y, Z*/
-    camera.lookAt(0 , -2, 3);
-    cameraRotationInit = camera.rotation;    
+    camera.position.set(10, 7, -7); /*X, Y, Z*/
+    camera.lookAt(0 , -2, 1);
+    cameraRotationInit = camera.rotation;
     
     //orbit.update();
 };

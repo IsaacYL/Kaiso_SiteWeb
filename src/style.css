@@ -1,19 +1,20 @@
-html{
+html {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
 }
 
 body {
-    overflow : hidden;
+    overflow: hidden;
     margin: 0;
     height: 100vh;
 }
 
-canvas{
+canvas {
     position: absolute;
     z-index: -1;
-    top : 0;
+    top: 0;
+    width: 80vw;
 }
 
 /*.Test{
@@ -24,49 +25,89 @@ canvas{
     position : absolute;
 }*/
 
-header{
+header {
     display: flex;
     justify-content: space-between;
-    padding : 2rem 3rem;
-    height: 8vh;
+    align-items: center;
+    padding: 2rem 3rem;
+    height: 8vmin;
 }
 
-.logo{
-    height: 100%;
+.logo {
+    height: 7vmin;
 }
 
-.divbtn{
-    width: 20rem;
+.divbtn {
     display: flex;
     justify-content: space-between;
 }
 
-.btn{
-    font-size: 1rem;
-    padding : 1rem 2rem;
+.btn {
+    font-size: 1em;
     border-radius: 2rem;
     border-color: #F2F2F2;
     border-style: solid;
     border-width: 0.25rem;
 
     background-color: #00000000;
-    color: #F2F2F2;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+}
+
+.up {
+    padding: 2vmin 4vmin;
+    margin-left: 1rem;
+}
+
+.right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100vw;
+    height: 65vh;
 }
 
 h1{
-    font-family: 'Righteous', cursive;
-    width: 15rem;
+    margin-right: 20vmin;
 }
 
-footer{
-    position:absolute;
-    background-color: black;
+footer {
+    position: absolute;
 
     display: flex;
     justify-content: space-between;
-    height: 8vh;
-    width: 70vw;
+    width: 100%;
     bottom: 0;
+    padding: 2rem 0rem;
+}
+
+h2 {
+    margin: 0;
+}
+
+.down {
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+}
+
+.border{
+    margin: 0rem 3rem;
+    display: flex;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.title{
+    font-family: 'Righteous', cursive;
+    width: 15rem;
+    color: white;
+    font-size: 5vmin;
+}
+
+.btntext{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 2vmin;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,17 +18,24 @@
     <header>
         <a href="./index.html"><img class="logo" src="./assets/Logo.svg"></a>
         <div class="divbtn">
-            <input type="button" onclick="window.location.href='./service.html';" value="Service" class="btn up"/>
-            <input type="button" onclick="window.location.href='./contact.html';" value="Contact" class="btn up"/>
+            <a href=""><button class="btn up btntext">Service</button></a>
+            <a href=""><button class="btn up btntext">Contact</button></a>
         </div>
     </header>
 
-    <h1>TITRE ENORME QUI CLAQUE</h1>
+    <div class="right">
+        <h1 class="title">TITRE ENORME QUI CLAQUE</h1>
+    </div>
 
     <footer>
-        <input type="button" onclick="window.location.href='./language.html';" value=">" class="btn down"/>
-        <input type="button" onclick="window.location.href='./language.html';" value="EN" class="btn down"/>
+        <a class="border" style="display: flex;" href="./projects.html">
+            <h2 class="btntext">View our project</h2>
+            <button class="btn down btntext">></button>
+        </a>
+        <a href=""><button class="btn down border btntext">EN</button></a>
     </footer>
+
     <script src="./js/script.js" type="module"></script>
 </body>
+
 </html>
