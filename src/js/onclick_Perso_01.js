@@ -48,7 +48,7 @@ export default function onClick(event) {
     var intersects = raycaster.intersectObjects(scene.children);
 
     const Perso = intersects.find(intersect => intersect.object.name.toLowerCase() === "куб");
-    console.dir(scene.children);
+    console.dir(intersects);
 
     let haut, bas;
     let start, previousTimeStamp;

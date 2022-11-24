@@ -5,25 +5,27 @@ html {
 }
 
 body {
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin: 0;
-    height: 100vh;
+}
+
+.bodyprojects{
+    background-color: #A6B6D7;
 }
 
 canvas {
     position: absolute;
     z-index: -1;
     top: 0;
-    width: 80vw;
 }
 
-/*.Test{
+.Test{
     visibility: hidden;
     width: 10vw;
     height: 10vh;
     background-color: black;
     position : absolute;
-}*/
+}
 
 header {
     display: flex;
@@ -75,14 +77,9 @@ h1{
     margin-right: 20vmin;
 }
 
-footer {
-    position: absolute;
-
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    bottom: 0;
+.footerhome{
     padding: 2rem 0rem;
+    width: 100%;
 }
 
 h2 {
@@ -106,7 +103,7 @@ a{
 
 .title{
     font-family: 'Righteous', cursive;
-    width: 15rem;
+    width: 20rem;
     color: white;
     font-size: 5vmin;
 }
@@ -118,3 +115,86 @@ a{
     font-size: 2vmin;
 }
 
+footer{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+}
+
+.footerprojects{
+    top: 120vmax;
+    z-index: -1;
+    background-image: url("./assets/Footerlogo.svg");
+    background-repeat: no-repeat;
+    background-size: 200vmin;
+    background-position: right bottom;
+    height: 150vh;
+    width: 100vw;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.mentions{
+    display: flex;
+    width: 50vw;
+    justify-content: space-between;
+    margin-right: 10vmin;
+    margin-bottom: 5vh;
+}
+
+h6{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 1.7vmin;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10vh 3vw;
+    grid-auto-rows: calc((100vw - 6vw - 6rem) * 0.5);
+    padding: 6vw;
+}
+
+.case{
+    background-color: #F2F2F2;
+    padding: 4vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h3{
+    margin: 0;
+    color: black;
+    font-family: 'Righteous', cursive;
+    font-size: 3vmax;
+}
+
+.text{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 2vmin;
+}
+
+.uptext{
+    padding: 3rem 10vw;
+    width: 55%;
+}
+
+.titleprojects{
+    font-size: 10vmin;
+    width: 100%;
+    font-weight: 500;
+}
+
+.Minidiv{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
