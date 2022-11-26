@@ -5,12 +5,16 @@ html {
 }
 
 body {
-    /*overflow: hidden;*/
+    overflow-x: hidden;
     margin: 0;
 }
 
-.bodyprojects{
+.bodyprojects {
     background-color: #A6B6D7;
+}
+
+.bodyservice{
+    background-color: #BE0426;
 }
 
 canvas {
@@ -19,12 +23,12 @@ canvas {
     top: 0;
 }
 
-.Test{
+.Test {
     visibility: hidden;
     width: 10vw;
     height: 10vh;
     background-color: black;
-    position : absolute;
+    position: absolute;
 }
 
 header {
@@ -54,7 +58,8 @@ header {
     background-color: #00000000;
 }
 
-.btn:hover, .indirecthover:hover ~ .btn{
+.btn:hover,
+.indirecthover:hover~.btn {
     color: black;
     border-color: black;
     background-color: #F2F2F2;
@@ -65,7 +70,7 @@ header {
     margin-left: 1rem;
 }
 
-.right{
+.right {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -73,11 +78,12 @@ header {
     height: 65vh;
 }
 
-h1{
+h1 {
     margin-right: 20vmin;
+    text-transform: uppercase;
 }
 
-.footerhome{
+.footerhome {
     padding: 2rem 0rem;
     width: 100%;
 }
@@ -91,38 +97,38 @@ h2 {
     margin-left: 1rem;
 }
 
-.border{
+.border {
     margin: 0rem 3rem;
     display: flex;
     align-items: center;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.title{
+.title {
     font-family: 'Righteous', cursive;
     width: 20rem;
     color: white;
     font-size: 5vmin;
 }
 
-.btntext{
+.btntext {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: white;
     font-size: 2vmin;
 }
 
-footer{
+footer {
     position: absolute;
     display: flex;
     justify-content: space-between;
     bottom: 0;
 }
 
-.footerprojects{
+.footerprojects {
     top: 120vmax;
     z-index: -1;
     background-image: url("./assets/Footerlogo.svg");
@@ -135,7 +141,15 @@ footer{
     align-items: flex-end;
 }
 
-.mentions{
+.footerproject{
+    top: 140vmax;
+    height: 150vh;
+    width: 100vw;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.mentions {
     display: flex;
     width: 50vw;
     justify-content: space-between;
@@ -143,7 +157,15 @@ footer{
     margin-bottom: 5vh;
 }
 
-h6{
+.mentionsdeux {
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    margin-right: 10vmin;
+    margin-bottom: 2vh;
+}
+
+h6 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: white;
@@ -158,7 +180,7 @@ h6{
     padding: 6vw;
 }
 
-.case{
+.case {
     background-color: #F2F2F2;
     padding: 4vmax;
     display: flex;
@@ -166,35 +188,158 @@ h6{
     justify-content: space-between;
 }
 
-h3{
+h3 {
     margin: 0;
     color: black;
     font-family: 'Righteous', cursive;
     font-size: 3vmax;
 }
 
-.text{
+.text {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: white;
     font-size: 2vmin;
 }
 
-.uptext{
+.uptext {
     padding: 3rem 10vw;
     width: 55%;
 }
 
-.titleprojects{
+.titleprojects {
     font-size: 10vmin;
     width: 100%;
     font-weight: 500;
 }
 
-.Minidiv{
+.Minidiv {
     display: flex;
     justify-content: space-between;
     color: black;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
+}
+
+.black {
+    color: black;
+}
+
+.btnblack {
+    border-color: black;
+}
+
+.un {
+    position: absolute;
+    height: 80vh;
+    left: 35vw;
+    top: 40vh;
+}
+
+h4 {
+    position: absolute;
+    left: 30vw;
+    top: 125vh;
+}
+
+.deux {
+    margin-top: 10vh;
+    margin-bottom: 0;
+    height: 80vmin;
+}
+
+.block {
+    display: flex;
+    top: 0;
+    margin-top: 5vh;
+}
+
+.cadre {
+    border-color: #000000;
+    border-style: solid;
+    border-width: 2rem;
+    height: 60vh;
+    width: 60vmax;
+    background-image: url("./assets/Bitodocus.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    margin: 5vw;
+}
+
+.cadretxt {
+    width: 20vw;
+    padding: 5vw 0vmax;
+}
+
+.cadretxtdeux {
+    margin: 0 auto;
+    width: 70vw;
+    padding: 6vmax 5vmax;
+    padding-top: 3vmax;
+}
+
+#slider {
+    margin: 1vw 5vw;
+    position: relative;
+    overflow: hidden;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 2rem;
+}
+
+.slide {
+    width: 100%;
+
+    display: none;
+    animation-name: fade;
+    animation-duration: 1s;
+
+}
+
+.slideimg {
+    width: 100%;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    padding: 15px 10px;
+    border-radius: 5px;
+
+}
+
+.controls:hover {
+    background: white;
+    transition: 0.3s;
+}
+
+.controls:active {
+    color: grey;
+}
+
+#left-arrow {
+    left: 10px;
+}
+
+#right-arrow {
+    right: 10px;
+}
+
+#dots-con {
+
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    background: grey;
+    padding: 8px;
+    border-radius: 50%;
+    margin: 10px 5px;
+}
+
+.active {
+    background: rgb(0, 0, 0);
 }
